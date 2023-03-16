@@ -15,3 +15,5 @@ Commands
 To start the project          -->  npm start
 
 To install the node modules   -->  npm install or npm i
+
+Open http://localhost:3000 to view it in the browser.
