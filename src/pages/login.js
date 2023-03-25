@@ -7,6 +7,7 @@ import Loading from "./components/Animation/Loading";
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // import background from "./src/coronavirus.jpg";
+
 toast.configure()
 
 const Login= () =>{

@@ -4,17 +4,22 @@ import { useHistory, Redirect } from "react-router-dom";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+// import Loading from "./components/Animation/Loading";
+
 toast.configure()
 
 function UserHome() {
+   
     const history = useHistory();
     const auth = getAuth();
     const user = auth.currentUser;
+    console.log(user.displayName);
     
     if (!user) {
         return <Redirect to="/login" />
     }
     function signout() {
+
         const auth = getAuth();
         signOut(auth).then(() => {
             history.push("/Login");
@@ -28,13 +33,16 @@ function UserHome() {
     function SearchVaccinCenter(){
         history.push("/SearchVaccinCenter")
     }
+    
     return (
-        <><div style={{backgroundColor:"black",marginTop:"-10px"}} className="continer">
+        <>
+        
+        <div style={{backgroundColor:"black",marginTop:"-10px"}} className="continer">
             <nav  className="navbar navbar-light bg-light">
                 <div style={{backgroundColor:"black",height:"60px"}}  className="container-fluid">
                     <button style={{color:"white",backgroundColor:"grey"}} className="btn btn-outline-secondary" onClick={signout}>Logout</button>
                     <div className="d-flex">
-                        <button  style={{color:"white"}} type="button" className="btn btn-white " disabled>Hello {user.displayName}</button>
+                        <button  style={{color:"white"}} type="button" className="btn btn-white " disabled> Hello {user.displayName}</button>
                     </div>
                 </div>
             </nav>

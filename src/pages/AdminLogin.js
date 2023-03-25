@@ -27,7 +27,7 @@ const AdminLogin = () => {
     const history = useHistory();
     const auth = getAuth();
     if (currentUser) {
-        return <Redirect to="/home"/>
+        return <Redirect to="/Home"/>
 
     }
     function login() {

@@ -47,6 +47,7 @@ function AddVaccin() {
             
         });
         toast("Vaccination Centre added successfully")
+        setTimeout(function(){ window.location.reload(); }, 5000); 
         console.log("Document written with ID: ", docRef.id);
           
     }
